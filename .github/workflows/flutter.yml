@@ -1,0 +1,12 @@
+name: Build the flutter version of the RustDesk
+
+on:
+  workflow_dispatch:  # 允许你手动点击运行
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    uses: rustdesk/.github/.github/workflows/flutter-reusable.yml@main
